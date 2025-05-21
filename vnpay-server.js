@@ -63,6 +63,7 @@ app.post("/api/create-vnpay-url", (req, res) => {
   res.json({ paymentUrl });
 });
 
-app.listen(3001, () => {
-  console.log("✅ VNPAY backend running at http://localhost:3001");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`✅ VNPAY backend running on port ${PORT}`);
 });
