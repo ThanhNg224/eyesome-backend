@@ -6,11 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ VNPAY Sandbox credentials
+// VNPAY Sandbox credentials
 const vnp_TmnCode = "9FFLZAIW";
 const vnp_HashSecret = "4ADBTJJV2PGICW2B8TSOHIUA4YP92GC7";
 const vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-const vnp_ReturnUrl = "https://google.com"; // 👈 bạn thay bằng /orders nếu cần
+const vnp_ReturnUrl = "https://google.com"; 
 
 app.post("/api/create-vnpay-url", (req, res) => {
   const { amount } = req.body;
